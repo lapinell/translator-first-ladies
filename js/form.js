@@ -1,5 +1,18 @@
 "use strict";
 
+let german = require('./translateToGerman');
+let italian = require('./translateToItalian');
+let french = require('./translateToFrench');
+let spanish = require('./translateToSpanish');
+
+let Languages = {
+    german,
+    italian,
+    french,
+    spanish
+};
+
+
 
 let greetingTranslator = () => {
     //1. find which language is selected
@@ -34,25 +47,26 @@ let greetingTranslator = () => {
 
     switch(true) {
         case spanishSelection:
-            console.log("user picked:", "spanish"); //require translateToSpanish();
+            console.log("user picked:", "spanish"); 
             spanish(englishGreetingArray);
             break;
         case frenchSelection:
-            console.log("user picked:", "french"); //require translateToFrench();
+            console.log("user picked:", "french"); 
             french(englishGreetingArray);
             break;
         case italianSelection:
-            console.log("user picked:", "italian"); //require translateToItalian();
+            console.log("user picked:", "italian"); 
             italian(englishGreetingArray);
             break;
         case germanSelection:
-            console.log("user picked:", "german"); //require translateToGerman();
+            console.log("user picked:", "german");
             german(englishGreetingArray);
             break;
         default:
             console.log("language somehow not chosen...");
-    };
+    }
 
+    let translatedGreetingArray = [];
     let translatedGreeting = translatedGreetingArray.join(' ');
     console.log("translated string:", translatedGreeting);
 
@@ -68,3 +82,6 @@ let greetingTranslator = () => {
 let translateButton = document.getElementById("translateButton");
 
 translateButton.addEventListener("click", greetingTranslator, false);
+
+
+module.exports = Languages;
