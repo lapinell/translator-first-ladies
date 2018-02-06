@@ -3,42 +3,52 @@
 console.log("test");
 
 
-let italianWords = {
-        "merry": "joyeux",
-        "christmas": "Noël",
-        "and": "et",
-        "happy": "bonne",
-        "new": "année",
-        "year": "nuovo",
-        "valentine": "Valentin",
-        "holiday": "vacances",
-        "holidays": "vacances",
-        "halloween": "halloween",
-        "thanksgiving": "action de grâces",
-        "birthday": "anniversaire", 
-        "prosperous": "prospère",
-        "xmas" : "Noël",
-        "x-mas" : "Noël"
+let frenchWords = {
+       "merry": "joyeux",
+       "christmas": "Noël",
+       "and": "et",
+       "happy": "bonne",
+       "new": "année",
+       "year": "nuovo",
+       "valentine": "Valentin",
+       "holiday": "vacances",
+       "holidays": "vacances",
+       "halloween": "halloween",
+       "thanksgiving": "action de grâces",
+       "birthday": "anniversaire", 
+       "prosperous": "prospère",
+       "xmas" : "Noël",
+       "x-mas" : "Noël"
 };
-
 let translatedGreetingArray = [];
+console.log("French: ", translatedGreetingArray);
 
+let englishGreetingArray = ['Merry', 'Christmas']; //take out
+
+console.log("englishGreetingArray", englishGreetingArray);
 
 function translateToFrench(array) {
+       
+   for(let i = 0; i < englishGreetingArray.length; i++) {
 
-    let translatedGreetingArray = frenchWords.values();
-    let holidayObjectArray = frenchWords.keys(); 
-        
-    for(let i = 0; i > userGreeting.length; i++) {
-        if(userGreeting[i] === holidayObjectArray[i]) {
-            let transWord = translatedGreetingArray[i];
-        } else {
-            console.log("Invalid holiday greeting. Please try a new greeting.");
-        }
-        translatedGreetingArray.push(transWord);
+       let frWords = Object.values(frenchWords);
+       console.log("French Object Words: ", frWords);
 
-    }
+       let englishWords = Object.keys(frenchWords); 
+       console.log("english words: ", englishWords);
 
-console.log("French", translatedGreetingArray);
-return translatedGreetingArray;
-    };
+       for(let j = 0; j < frWords.length; j++){
+
+           if(englishGreetingArray[i].toLowerCase() === englishWords[j].toLowerCase()) {
+               let transWord = englishWords[j];
+               console.log("translated word: ", transWord);
+               translatedGreetingArray.push(transWord);
+               console.log(translatedGreetingArray);
+
+           }else {
+               console.log("Try again");
+                   }
+           }
+   }};
+
+module.exports = translateToFrench;

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>First Ladies Translator</title>
+    <link rel="stylesheet" type="text/css"  href="../css/styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
     <section>
@@ -12,14 +14,14 @@
     </section>
     <section>
         <form id="holidayGreetingTranslator">  
-            <fieldset>
+            <fieldset class="backgroundColor">
                 <label>Choose a language:</label>
                 <input type="radio" name="language" id="spanishTranslation" value="spanish" checked> Spanish
                 <input type="radio" name="language" id="frenchTranslation" value="french"> French
                 <input type="radio" name="language" id="italianTranslation" value="italian"> Italian
                 <input type="radio" name="language" id="germanTranslation" value="german"> German
             </fieldset>
-            <fieldset>
+            <fieldset class="backgroundColor">
                 <textarea type="text" name="userInput" id="userGreeting" rows="10" cols="60">Write your simple greeting here. Example: "Merry Christmas" or "Happy New Year"</textarea>
             </fieldset>
             <input type="button" value="Translate" id="translateButton"> 
