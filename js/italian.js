@@ -4,58 +4,50 @@ console.log("test");
 
 
 let italianWords = {
-        "merry": "buon",
-        "christmas": "natale",
+        "merry": "Buon",
+        "christmas": "Natale",
         "and": "e",
-        "happy": "felice",
-        "new": "anno",
-        "year": "nuovo",
-        "valentine": "san valentino",
-        "holiday": "vacanze",
-        "holidays": "vacanze",
-        "halloween": "halloween",
-        "thanksgiving": "ringraziamento",
-        "birthday": "compleanno", 
-        "prosperous": "prospero",
-        "xmas" : "natale",
-        "x-mas" : "natale"
+        "happy": "Felice",
+        "new": "Anno",
+        "year": "Nuovo",
+        "valentine": "San Valentino",
+        "holiday": "Vacanze",
+        "holidays": "Vacanze",
+        "halloween": "Halloween",
+        "thanksgiving": "Ringraziamento",
+        "birthday": "Compleanno", 
+        "prosperous": "Prospero",
+        "xmas" : "Natale",
+        "x-mas" : "Natale"
 };
 
 let translatedGreetingArray = [];
+let englishGreetingArray = ['Merry', 'Christmas', 'and', 'happy', 'new', 'year']; //take out
 
-let englishGreetingArray = ['Merry', 'Christmas']; //take out
+console.log("englishGreetingArray", italianWords);
 
+function translateToItalian() {
+        // console.log("Italian is checked as the translating language");
 
-function translateToItalian(array) {
+    for(let i = 0; i < englishGreetingArray.length; i++) {
 
-    let translatedGreetingArray = italianWords.values();
-    let holidayObjectArray = italianWords.keys(); 
-        
-    for(let i = 0; i > userGreeting.length; i++) {
-        if(userGreeting[i] === holidayObjectArray[i]) {
-            let transWord = translatedGreetingArray[i];
-        } else {
-            console.log("Invalid holiday greeting. Please try a new greeting.");
+        let itWords = Object.values(italianWords);
+        console.log("Italian Object Words: ", itWords);
+
+        let englishWords = Object.keys(italianWords); 
+        console.log("english words: ", englishWords);
+
+        for(let j = 0; j < itWords.length; j++){
+            if(italianWords[i].toLowerCase() === englishWords[j].toLowerCase()) {
+                let transWord = itWords[i];
+                console.log("translated word: ", transWord);
+                translatedGreetingArray.push(transWord);
+                console.log(translatedGreetingArray);
+            }
         }
-        translatedGreetingArray.push(transWord);
-
     }
-
-console.log("italian", translatedGreetingArray);
-return translatedGreetingArray;
-    };
+    return translatedGreetingArray;
+}
 
 
-
-
-
-
-
-//     let dictionary = {
-//         "Merry": {it: "Buon",
-//                 fr: "joyeux",},
-//         "Christmas": {it: "Natale",
-//                     fr: "Noel"}
-//     }
-// let translator = $('body").translate({lang: "en", t: dictionary})');
-// console.log(translator.long("merry"));
+module.exports = translateToItalian;
