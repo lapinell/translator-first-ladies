@@ -1,0 +1,42 @@
+   
+
+   $font-family: 'Open Sans', sans-serif;
+    $font-size: 24px;
+	$font-style: normal;
+	$font-variant: normal;
+	$font-weight: 500;
+    $line-height: 26.4px;
+    $background-color: #90EE90;
+    $box-shadowsize: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    $button-color: #696969;
+    
+
+    h1 {
+        font-family: 100% $font-family;
+        font-size: $font-size;
+        font-style: $font-style;
+	    font-variant: $font-variant;
+	    font-weight: $font-weight;
+        line-height: $line-height;
+      }
+
+    .backgroundColor{
+        background-color: $background-color;
+        
+    }
+
+    .translateButton {
+        box-shadow: $box-shadowsize;
+        color: $button-color;
+    }
+
+    body{
+        width: 1920px;
+    }
+
+    section{
+        width: 50%;
+        margin: auto;
+    }
+
+    
