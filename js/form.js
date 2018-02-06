@@ -1,6 +1,5 @@
 "use strict";
 
-//required files here?
 
 let greetingTranslator = () => {
     //1. find which language is selected
@@ -36,19 +35,19 @@ let greetingTranslator = () => {
     switch(true) {
         case spanishSelection:
             console.log("user picked:", "spanish"); //require translateToSpanish();
-            translateToSpanish(englishGreetingArray);
+            spanish(englishGreetingArray);
             break;
         case frenchSelection:
             console.log("user picked:", "french"); //require translateToFrench();
-            translateToFrench(englishGreetingArray);
+            french(englishGreetingArray);
             break;
         case italianSelection:
             console.log("user picked:", "italian"); //require translateToItalian();
-            translateToItalian(englishGreetingArray);
+            italian(englishGreetingArray);
             break;
         case germanSelection:
             console.log("user picked:", "german"); //require translateToGerman();
-            translateToGerman(englishGreetingArray);
+            german(englishGreetingArray);
             break;
         default:
             console.log("language somehow not chosen...");
