@@ -1,5 +1,7 @@
 "use strict";
 
+//required files here?
+
 let greetingTranslator = () => {
     //1. find which language is selected
 
@@ -15,46 +17,38 @@ let greetingTranslator = () => {
 
     //2. Need js to grab the value of the text area and store in a string
 
-    const userGreeting = document.getElementById("userGreeting");
+    const userGreeting = document.getElementById("userGreeting").value;
 
-    console.log("user greeting:", userGreeting.value);
+    console.log("user greeting:", userGreeting);
 
     //2b. Turn the string into an array
 
-    let userGreetingArray = () => {
-        //2bi. get the users string
-        let userString = userGreeting.value;
+    let englishGreetingArray = userGreeting.split(" "); // this var will be called into the appropriate toTranslateLanguage.js file and translated
 
-        //2bii. parse string into array
-        let englishGreeting = userString.split(" ");
+    // let translatedGreetingArray = englishGreetingArray; //this is the variable the translation.js will output
 
-        //2biii. console user's string in an array
-        // console.log("userGreetingArray:", englishGreeting);
-        return englishGreeting;
+    // console.log("translatedGreetingArray variable:", translatedGreetingArray);
 
-    };
-
-
-    let translatedGreetingArray = userGreetingArray();
-
-    console.log("translatedGreetingArray variable:", translatedGreetingArray);
-
-    //translatedGreetingArray = [];
+    // translatedGreetingArray = [];
 
     //3. Take the array items and translate them
 
     switch(true) {
         case spanishSelection:
             console.log("user picked:", "spanish"); //require translateToSpanish();
+            translateToSpanish(englishGreetingArray);
             break;
         case frenchSelection:
             console.log("user picked:", "french"); //require translateToFrench();
+            translateToFrench(englishGreetingArray);
             break;
         case italianSelection:
             console.log("user picked:", "italian"); //require translateToItalian();
+            translateToItalian(englishGreetingArray);
             break;
         case germanSelection:
             console.log("user picked:", "german"); //require translateToGerman();
+            translateToGerman(englishGreetingArray);
             break;
         default:
             console.log("language somehow not chosen...");
