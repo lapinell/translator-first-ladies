@@ -49,6 +49,6 @@ function translateToFrench(array) {
                 console.log("Try again");
                     }
             }
-    }};
+    }}
 
 module.exports = translateToFrench;

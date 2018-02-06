@@ -46,7 +46,7 @@ function translateToItalian() {
             }
         }
     }
-    return translatedGreetingArray;
+    return translateToItalian;
 }
 
 
