@@ -41,7 +41,21 @@ function translateToItalian(array) {
 
     }
 
-console.log("italian", italianToEnglish);
+console.log("italian", translatedGreetingArray);
 return translatedGreetingArray;
     };
 
+
+
+
+
+
+
+//     let dictionary = {
+//         "Merry": {it: "Buon",
+//                 fr: "joyeux",},
+//         "Christmas": {it: "Natale",
+//                     fr: "Noel"}
+//     }
+// let translator = $('body").translate({lang: "en", t: dictionary})');
+// console.log(translator.long("merry"));
