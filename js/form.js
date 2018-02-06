@@ -35,8 +35,6 @@ let greetingTranslator = () => {
     };
 
 
-
-
     let translatedGreetingArray = userGreetingArray();
 
     console.log("translatedGreetingArray variable:", translatedGreetingArray);
@@ -48,12 +46,16 @@ let greetingTranslator = () => {
     switch(true) {
         case spanishSelection:
             console.log("user picked:", "spanish"); //require translateToSpanish();
+            break;
         case frenchSelection:
-            console.log("user pic-ked:", "french"); //require translateToFrench();
+            console.log("user picked:", "french"); //require translateToFrench();
+            break;
         case italianSelection:
             console.log("user picked:", "italian"); //require translateToItalian();
+            break;
         case germanSelection:
             console.log("user picked:", "german"); //require translateToGerman();
+            break;
         default:
             console.log("language somehow not chosen...");
     };
